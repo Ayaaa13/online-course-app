@@ -1,0 +1,643 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --main-color: #424055;
+  --background-color: #778794;
+  --support-color: #000;
+  --support-color-two: #fff;
+}
+
+/* Progress Bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: var(--main-color);
+  transform-origin: 0%;
+}
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+/* Main Navbar */
+.main-navbar {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.main-navbar a {
+  color: var(--support-color);
+  font-weight: 600;
+}
+
+.main-navbar a:hover {
+  color: var(--main-color);
+}
+
+/* Header Buttons */
+.header .buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.header .login-button {
+  background: none;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.header .signup-button {
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  color: var(--support-color-two);
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Bars Button */
+.bars {
+  display: none;
+}
+
+/* Header Dropdown */
+.header-dropdown .dropdown-logo {
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.header-dropdown .dropdown-navbar {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.header-dropdown .dropdown-navbar a {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--support-color);
+}
+
+.header-dropdown .dropdown-navbar a:hover {
+  color: var(--main-color);
+}
+
+.header-dropdown .dropdown-buttons {
+  display: inline-flex;
+  gap: 5px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  filter: blur(500px);
+  /* z-index: -5; */
+  background-color: var(--support-color-two);
+}
+
+/* Header Dropdown */
+.header-dropdown {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  text-align: right;
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+
+  padding: 50px;
+  background-color: var(--support-color-two);
+  z-index: 5;
+}
+
+/* Sections */
+section {
+  padding: 100px;
+}
+
+section .title {
+  font-size: 36px;
+  color: var(--main-color);
+}
+
+/* Section One */
+.section-one {
+  display: flex;
+  justify-content: center;
+
+  background-image: url(/images/sections/section-one/section-one-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-one .welcome-description {
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: var(--support-color-two);
+}
+
+.section-one .title-and-description {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-one .title {
+  font-size: 50px;
+  color: var(--main-color);
+  text-shadow: 2px 2px 4px var(--support-color);
+}
+
+.section-one .description {
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px var(--main-color);
+  width: 500px;
+}
+
+.section-one .button {
+  display: flex;
+  justify-content: center;
+}
+
+.section-one .get-started-button {
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  color: var(--support-color-two);
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* Section Two */
+.section-two {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 75px 100px;
+}
+
+.section-two .card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 50px;
+  border: 1px solid var(--main-color);
+  width: 350px;
+
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.section-two .card h2 {
+  font-size: 16px;
+}
+/* Section Three */
+.section-three {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+.section-three .cards {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section-three .card {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 25px;
+  background-color: var(--background-color);
+
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.section-three .card h2 {
+  font-size: 30px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  color: var(--support-color-two);
+  background-color: var(--main-color);
+}
+
+.section-three .card p {
+  width: 250px;
+}
+
+.section-three .card h2,
+.section-three .card h3,
+.section-three .card p {
+  color: var(--support-color-two);
+}
+
+/* Section Four */
+.section-four .title-and-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-four .view-all-courses-button {
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  color: var(--support-color-two);
+  border-radius: 12px;
+  padding: 8px 24px;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.section-four .card {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  width: 300px;
+}
+
+.section-four .courses {
+  display: flex;
+  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+  place-content: center;
+}
+
+.section-four .content {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.section-four .sub-title {
+  font-size: 16px;
+}
+.section-four .description {
+  font-size: 14px;
+}
+
+.section-four .enroll-now-button {
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  color: var(--support-color-two);
+  border-radius: 12px;
+  padding: 8px 24px;
+  font-size: 12px;
+  width: 111px;
+
+  cursor: pointer;
+}
+
+/* Section Five */
+.section-five {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+.section-five .title-and-arrows {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-five .arrows {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.section-five .arrow {
+  font-size: 30px;
+}
+
+.section-five .instructors {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fill, 250px);
+  place-content: center;
+}
+
+.section-five .card {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-five .content {
+  text-align: center;
+}
+
+.section-five .social-media {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.section-five .social-media a {
+  display: flex;
+  align-items: center;
+}
+
+/* Section Six */
+.section-six {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.section-six .title-and-description {
+  text-align: center;
+}
+
+.section-six .testimonies {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  color: var(--support-color-two);
+}
+
+.section-six .card {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 25px 15px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.25);
+  border-radius: 15px;
+  width: 280px;
+  background-color: var(--background-color);
+}
+
+.section-six .card h1 {
+  font-size: 48px;
+}
+
+.section-six .comment {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.section-six .user-information {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.section-six .name,
+.section-six .date {
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  padding: 100px;
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer .logo {
+  font-size: 36px;
+  color: var(--main-color);
+}
+
+footer .main-footer {
+  display: flex;
+  gap: 100px;
+}
+
+footer .main-footer-content {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+footer .links {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+footer .links a,
+footer .links span {
+  color: var(--support-color);
+  font-weight: 600;
+}
+
+footer,
+.copyright {
+  background-color: var(--background-color);
+}
+/* Copyright */
+.copyright {
+  text-align: center;
+
+  padding: 25px 100px;
+}
+
+.copyright span {
+  font-weight: 600;
+}
+/* Media Query */
+@media only screen and (max-width: 1453px) {
+  footer {
+    gap: 120px;
+  }
+  footer .main-footer {
+    gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .bars {
+    display: flex;
+    font-size: 24px;
+
+    cursor: pointer;
+  }
+
+  .header .main-navbar,
+  .header .buttons {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1275px) {
+  footer {
+    gap: 75px;
+  }
+}
+
+@media only screen and (max-width: 1227px) {
+  /* footer .logo,
+  footer .main-footer {
+    width: 100%;
+  } */
+
+  footer .sub-title {
+    font-size: 16px;
+  }
+
+  footer .links a,
+  footer .links span,
+  .copyright span {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1075px) {
+  footer .logo,
+  footer .main-footer {
+    width: 100%;
+  }
+
+  footer .main-footer {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .section-four .card {
+    width: 250px;
+  }
+
+  .section-four .courses {
+    gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 877px) {
+  .header-dropdown .dropdown-logo {
+    font-size: 18px;
+  }
+
+  .header-dropdown .dropdown-navbar a {
+    font-size: 16px;
+  }
+
+  .header .login-button {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .header {
+    padding: 15px 25px;
+  }
+
+  section,
+  footer {
+    padding: 25px;
+  }
+
+  section .title {
+    font-size: 26px;
+  }
+
+  .section-one,
+  .section-two,
+  .section-three {
+    padding: 25px;
+  }
+
+  .section-four .view-all-courses-button {
+    font-size: 8px;
+  }
+
+  .section-one .title {
+    font-size: 35px;
+    width: 400px;
+  }
+
+  .section-one .description {
+    font-size: 12px;
+    width: 350px;
+  }
+
+  .section-one .get-started-button {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .header-dropdown {
+    left: 30%;
+  }
+
+  .section-six .comment {
+    font-size: 14px;
+  }
+
+  .section-six .name,
+  .section-six .date {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  footer .main-footer {
+    flex-direction: column;
+  }
+}
